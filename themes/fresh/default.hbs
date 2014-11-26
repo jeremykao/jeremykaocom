@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {{! Document Settings }}
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    {{! Page Meta }}
+    <title>{{meta_title}} | Jeremy Kao</title>
+    <meta name="description" content="{{meta_description}}" />
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="{{asset "favicon.ico"}}">
+
+    {{! Styles'n'Scripts }}
+    <link rel="stylesheet" type="text/css" href="{{asset "css/screen.css"}}" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic|Open+Sans:700,400" />
+
+    {{! Ghost outputs important style and meta data with this tag }}
+    {{ghost_head}}
+</head>
+<body class="{{body_class}}">
+    
+    <header id="siteHeader" class="grid">
+      <p class="row mobileDisappear profilePicContainer"><a href="/"><img src="{{asset "images/profilePic.jpg"}}" alt="Jeremy Kao picture" class="profilePic" /></a></p>
+      <h1 class="module nameHeader">Jeremy Kao</h1>
+      <h3 class="module mobileDisappear nameTagline">Coder&nbsp;.&nbsp;Maker&nbsp;.&nbsp;Foodie</h3>
+      <h4 class="module mobileDisappear nameDesc">A curious, full-stack developer trying to make the world a better place. </h4>
+      <footer class="module mobileDisappear footer">&copy; 2014 Jeremy Kao. All Rights Reserved.</footer>
+      <nav>
+        <ul>
+          <li><a href="/about/" class="col-1-4 navLi"><i class="fa fa-user navIcon"></i></a></li>
+          <li><a href="/posts/" class="col-1-4 navLi"><i class="fa fa-file-text navIcon"></i></a></li>
+          <li><a href="https://twitter.com/jermsthekao" target="_blank" class="col-1-4 navLi"><i class="fa fa-twitter navIcon"></i></a></li>
+          <li><a href="https://www.linkedin.com/pub/jeremy-kao/38/347/771/" target="_blank" class="col-1-4 navLi"><i class="fa fa-linkedin-square navIcon"></i></a></li>
+        </ul>
+      </nav>
+    </header>
+    {{! Everything else gets inserted here }}
+    {{{body}}}
+
+    {{! Ghost outputs important scripts and data with this tag }}
+    {{ghost_foot}}
+
+    {{! The main JavaScript file for Fresh }}
+    <script type="text/javascript" src="{{asset "js/underscore-min.js"}}"></script>
+    <script type="text/javascript" src="{{asset "js/jquery.fitvids.js"}}"></script>
+    <script type="text/javascript" src="{{asset "js/index.js"}}"></script>
+
+</body>
+</html>

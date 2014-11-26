@@ -1,0 +1,29 @@
+{{!< default}}
+
+{{! The main content area on the homepage }}
+<main class="content module" id="content" role="main">
+    <h1 class="tagPageHeading"><span class="extra">Posts about</span> {{tag.name}}</h1>
+    <hr>
+    {{! Each post will be output using this markup }}
+    {{#foreach posts}}
+    {{#if @first}}
+      {{else}}
+      <hr>
+    {{/if}}
+    <article class="{{post_class}}">
+        <header class="post-header">
+            <span class="post-meta"><time datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMM YYYY"}}</time> {{tags prefix="on "}}</span>
+            <h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
+        </header>
+        <section class="post-excerpt">
+            <p>{{content words="150"}}<a href="{{url}}">Read more&hellip;</a></p>
+        </section>
+    </article>
+
+    {{/foreach}}
+
+    {{!! After all the posts, we have the previous/next pagination links }}
+    {{pagination}}
+
+    <p class="scrollUp"><i class="fa fa-arrow-circle-o-up"></i></p>
+</main>

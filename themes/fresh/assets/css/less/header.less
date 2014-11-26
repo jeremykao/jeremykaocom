@@ -1,0 +1,151 @@
+//header.less
+#siteHeader{
+  position: fixed;
+  width: 100%;
+
+  .nameHeader{
+    border-bottom: #d4a000 8px solid;
+    text-align: center;
+    z-index: 400;
+    position: relative;
+    transition: color ease 0.3s;
+    background-color: #ffca27;
+
+    &:hover{
+      color: #d4a000;
+      transition: color ease 0.3s;
+    }
+  }
+
+  @media (min-width:768px) {
+    width: 20%;
+    left: 0;
+    top: 0;
+    height: 100%;
+    border-right: #d4a000 8px solid;
+    background-color: #ffca27;
+
+    .nameHeader{
+      font-size: 6rem;
+    }
+
+    .profilePicContainer{
+      display: block;
+      text-align: center;
+      margin: 33% 0 0 0;
+    }
+    .profilePic{
+      width: 60%;
+      height: 60%;
+      border-radius: 10rem;
+      border: 6px solid #d4a000;
+      transition: all ease 0.3s;
+
+      &:hover{
+        width: 63%;
+        height: 63%;
+        margin-bottom: -3%;
+      }
+    }
+    .nameHeader{
+      border-bottom: none;
+      margin: 0;
+      padding-top: 0;
+    }
+    .nameTagline{
+      font-size: 2rem;
+      text-align: center;
+      display: block;
+    }
+    .nameDesc{
+      display: block;
+      font-size: 1.5rem;
+      margin-top: 10%;
+      text-align: center;
+    }
+    footer{
+      position: absolute;
+      width: 100%;
+      bottom: 2rem;
+      font-size: 0.8rem;
+      display: block;
+      text-align: center;
+    }
+  }
+
+
+  nav{
+    font-size: 1.5rem;
+    z-index: 100;
+    position: relative;
+    
+    &.covered{
+      top: -3rem;
+      transition: top ease 0.3s;
+    }
+    &.uncovered{
+      top: 0;
+      transition: top ease 0.3s;
+    }
+
+    ul{
+      margin: 0;
+    }
+    .navLi{
+      opacity: 0.8;
+      background-color: #4B4A4A;
+      padding: 1rem 0 0.5rem 0;
+      display: inline-block;
+      text-align: center;
+      border: 2px solid #444444;
+      border-top: 1px solid #444444;
+      border-bottom: 1px solid #444444;
+      transition: opacity ease 0.3s;
+
+      &:hover, .active{
+        opacity: 1;
+        background-color: #858484;
+
+        .navIcon{
+          color: #d4a000;
+        }
+      }
+    }
+
+    @media (min-width:768px) {
+      position: fixed;
+      top: 0;
+      left: 20%;
+      height: 100%;
+
+      ul{
+        width: 8rem;
+        height: 100%;
+        li{
+          display: block;
+          height: 25%;
+        }
+      }
+      .navLi{
+        float: none;
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        padding: 80% 0 80% 0;
+        border: 2px solid #444444;
+        border-left: 1px solid #444444;
+        border-right: 1px solid #444444;
+
+
+        .navIcon{
+          font-size: 4rem;
+        }
+      }
+    }
+  }
+
+
+
+
+}
+
