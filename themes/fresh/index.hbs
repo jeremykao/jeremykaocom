@@ -20,11 +20,6 @@
               <p>{{content}}</p>
           </section>
       </article>
-
-      {{#if @last}}
-        {{pagination}}
-        <p class="scrollUp"><i class="fa fa-arrow-circle-o-up"></i></p>
-      {{/if}}
     {{/foreach}}
 
     {{#unless posts}}
@@ -36,4 +31,7 @@
       <h3>What you'll find here</h3>
       <p>In this site, you'll find my thoughts and observations on the things I find interesting, specifically technology, entrepreneurship, food, STEM education, and human nature/behavior. You'll also find a showcase of some projects that I'm working on, some art that I do, and some photographs that I take.</p>
     {{/unless}}
+
+    {{pagination}}
+    <p class="scrollUp"><i class="fa fa-arrow-circle-o-up"></i></p>
 </main>
