@@ -6,24 +6,34 @@
     {{! Each post will be output using this markup }}
     {{#foreach posts}}
 
-    {{#if @first}}
-      {{else}}
-      <hr>
-    {{/if}}
-    <article class="{{post_class}}">
-        <header class="post-header">
-            <span class="post-meta"><time datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMM YYYY"}}</time> {{tags prefix="on "}}</span>
-            <h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
-        </header>
-        <section class="post-excerpt">
-            <p>{{content words="150"}}<a href="{{url}}">Read more&hellip;</a></p>
-        </section>
-    </article>
+      {{#if @first}}
+        {{else}}
+        <hr>
+      {{/if}}
 
+      <article class="{{post_class}}">
+          <header class="post-header">
+              <span class="post-meta"><time datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMM YYYY"}}</time> {{tags prefix="on "}}</span>
+              <h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
+          </header>
+          <section class="post-excerpt">
+              <p>{{content}}</p>
+          </section>
+      </article>
+
+      {{#if @last}}
+        {{pagination}}
+        <p class="scrollUp"><i class="fa fa-arrow-circle-o-up"></i></p>
+      {{/if}}
     {{/foreach}}
 
-    {{!! After all the posts, we have the previous/next pagination links }}
-    {{pagination}}
+    {{#unless posts}}
+      <h2>Hello Everyone!</h2>
+      <h3>About me</h3>
+      <p>I'm a recent Computer Engineering graduate of the University of California, San Diego. I love learning new things, eating good food, and creating things, from web applications to random artwork. I have developed software at Intel, Intuit, and LinkedIn, built web applications at Google's CSSI and Chrome Academy, and worked on a datalogging system for a learning center in Kenya.</p>
+      <p>Over the past few years, I've been passionate about promoting STEM education, as I've held numerous outreach events with IEEE at UCSD and helped out with Science Olympiad LA Regionals and SoCal State competitions. I believe the world is such a wonderful place, and I hope to improve it with the projects I pursue and the technology I build.</p>
 
-    <p class="scrollUp"><i class="fa fa-arrow-circle-o-up"></i></p>
+      <h3>What you'll find here</h3>
+      <p>In this site, you'll find my thoughts and observations on the things I find interesting, specifically technology, entrepreneurship, food, STEM education, and human nature/behavior. You'll also find a showcase of some projects that I'm working on, some art that I do, and some photographs that I take.</p>
+    {{/unless}}
 </main>
