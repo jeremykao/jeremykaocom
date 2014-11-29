@@ -202,17 +202,16 @@ pre code, tt {
     pointer-events: none;
 }
 .scrollUp{
-    display: none;
+    display: block;
+    position: fixed;
+    margin: 0;
+
     @media (min-width:768px) {
-        display: block;
-        position: fixed;
-        bottom: 0;
+        bottom: 2rem;
         right: 4rem;
     }
     @media (max-width:767px){
-        display: block;
-        position: fixed;
-        bottom: 0;
+        bottom: 1rem;
         right: 2rem;
     }
 }
