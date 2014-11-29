@@ -444,6 +444,14 @@ tt {
     right: 4rem;
   }
 }
+@media (max-width: 767px) {
+  .scrollUp {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    right: 2rem;
+  }
+}
 .mobileDisappear {
   display: none;
 }
