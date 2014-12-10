@@ -267,6 +267,10 @@ body {
   background: #D6EDFF;
   text-shadow: none;
 }
+sup {
+  font-size: 70%;
+  vertical-align: super;
+}
 h1,
 h2,
 h3,
@@ -276,6 +280,7 @@ h6 {
   text-rendering: optimizeLegibility;
   line-height: 1;
   margin-top: 0;
+  margin-bottom: 1rem;
   font-family: 'Open Sans', sans-serif;
 }
 h1 {
@@ -420,6 +425,9 @@ tt {
   border: none;
   padding: 0;
 }
+em {
+  font-style: italic;
+}
 #content {
   padding-top: 17rem;
 }
@@ -511,6 +519,7 @@ tt {
 #siteHeader {
   position: fixed;
   width: 100%;
+  z-index: 400;
 }
 #siteHeader .nameHeader {
   border-bottom: #d4a000 8px solid;
